@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>DeepaMehta 5 Plugin Template</name>
+    <groupId>com.example</groupId>
+    <artifactId>dm5-plugin-template</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <parent>
+        <groupId>de.deepamehta</groupId>
+        <artifactId>deepamehta-plugin</artifactId>
+        <version>4.8.7-SNAPSHOT</version>
+        <relativePath>../dm4-plugin/pom.xml</relativePath>
+    </parent>
+
+     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>web/dist/</exclude>
+                    <exclude>web/node_modules/</exclude>
+                    <exclude>web/src/</exclude>
+                    <exclude>web/.babelrc</exclude>
+                    <exclude>web/package.json</exclude>
+                    <exclude>web/webpack.config.js</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>com.example.dm5-plugin-template</Bundle-SymbolicName>
+                        <Bundle-Activator>de.deepamehta.core.osgi.PluginActivator</Bundle-Activator>
+                        <Include-Resource>{maven-resources}, web=src/main/resources/web/dist</Include-Resource>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
