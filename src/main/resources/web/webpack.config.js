@@ -1,16 +1,16 @@
-var path = require('path')
-
 var pluginUri = 'com.example.dm5-plugin-template'
-var pluginIdent = '_' + pluginUri.replace(/[.-]/g, '_')
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/' + pluginUri + '/',
     filename: 'plugin.js',
-    library: pluginIdent,
+    path: require('path').resolve(__dirname, 'dist'),
+    publicPath: '/' + pluginUri + '/',
+    library: '_' + pluginUri.replace(/[.-]/g, '_'),
     libraryTarget: 'jsonp'
+  },
+  resolve: {
+    extensions: [".js", ".vue"]
   },
   module: {
     rules: [
