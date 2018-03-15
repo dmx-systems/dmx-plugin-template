@@ -1,7 +1,7 @@
 var pluginUri = 'com.example.dm5-plugin-template'
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/plugin.js',
   output: {
     filename: 'plugin.js',
     path: require('path').resolve(__dirname, 'dist'),

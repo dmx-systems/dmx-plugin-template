@@ -7,8 +7,8 @@ export default {
 
   components: [
     {
-      extensionPoint: 'dm5.webclient.toolbar',
-      component: require('./components/Greeting').default
+      comp: require('./components/Greeting').default,
+      mount: 'toolbar-left'
     }
   ]
 }
