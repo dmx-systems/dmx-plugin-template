@@ -2,8 +2,10 @@
 
 ## Version History
 
+**0.2** -- Mar 26, 2018
+
 **0.1** -- May 1, 2017
 
 ------------
 Jörg Richter  
-May 1, 2017
+Mar 26, 2018

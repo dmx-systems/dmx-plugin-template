@@ -5,10 +5,8 @@ export default {
     module: require('./greeting').default
   },
 
-  components: [
-    {
-      comp: require('./components/Greeting').default,
-      mount: 'toolbar-left'
-    }
-  ]
+  components: [{
+    comp: require('./components/Greeting').default,
+    mount: 'toolbar-left'
+  }]
 }
