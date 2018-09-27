@@ -9,6 +9,6 @@
     "url": "https://github.com/jri/dm5-plugin-template.git"
   },
   "scripts": {
-    "build": "webpack -p --hide-modules"
+    "build": "../../node_modules/.bin/webpack -p --hide-modules"
   }
 }
