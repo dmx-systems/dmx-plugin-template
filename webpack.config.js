@@ -1,4 +1,7 @@
-var pluginUri = 'com.example.dm5-plugin-template'
+const { VueLoaderPlugin } = require('vue-loader')
+
+// the same as Bundle-SymbolicName (see pom.xml)
+const pluginUri = 'com.example.dm5-plugin-template'
 
 module.exports = {
   entry: './src/main/js/plugin.js',
@@ -24,5 +27,8 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }
