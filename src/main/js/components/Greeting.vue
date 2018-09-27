@@ -1,19 +1,19 @@
 <template>
-  <el-button class="greeting" @click="click">{{text}}</el-button>
+  <el-button class="greeting" @click="click">{{buttonLabel}}</el-button>
 </template>
 
 <script>
 export default {
 
-  data () {
-    return {
-      text: 'Hello DeepaMehta!'
+  computed: {
+    buttonLabel () {
+      return this.$store.state.greeting.buttonLabel
     }
   },
 
   methods: {
     click () {
-      console.log('Button clicked')
+      this.$store.dispatch('greet')
     }
   }
 }
