@@ -1,5 +1,5 @@
 <template>
-  <el-button @click="click">{{text}}</el-button>
+  <el-button class="greeting" @click="click">{{text}}</el-button>
 </template>
 
 <script>
@@ -18,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.greeting {
+  align-self: flex-end;
+}
+</style>

@@ -1,13 +1,13 @@
-const { VueLoaderPlugin } = require('vue-loader')
-
 // the same as Bundle-SymbolicName (see pom.xml)
 const pluginUri = 'com.example.dm5-plugin-template'
+
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: './src/main/js/plugin.js',
   output: {
     filename: 'plugin.js',
-    path: require('path').resolve(__dirname, 'dist'),
+    path: __dirname + '/dist',
     publicPath: '/' + pluginUri + '/',
     library: '_' + pluginUri.replace(/[.-]/g, '_'),
     libraryTarget: 'jsonp'
@@ -25,6 +25,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
       }
     ]
   },
