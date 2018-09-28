@@ -7,7 +7,6 @@ module.exports = {
   entry: './src/main/js/plugin.js',
   output: {
     filename: 'plugin.js',
-    path: __dirname + '/dist',
     publicPath: '/' + pluginUri + '/',
     library: '_' + pluginUri.replace(/[.-]/g, '_'),
     libraryTarget: 'jsonp'

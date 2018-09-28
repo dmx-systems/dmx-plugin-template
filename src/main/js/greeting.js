@@ -1,14 +1,19 @@
-const state = {
-  buttonLabel: "Greetings!"
-}
+export default ({dm5}) => ({
 
-const actions = {
-  greet () {
-    console.log('Greetings!')
+  state: {
+    buttonLabel: "Greetings!"
+  },
+
+  actions: {
+    greet () {
+      console.log('Greetings!')
+      dm5.restClient.createTopic({
+        typeUri: 'dmx.notes.note',
+        childs: {
+          'dmx.notes.title': {value: 'Greetings'},
+          'dmx.notes.text':  {value: '<p>from <b>DMX</b>!<p>'}
+        }
+      })
+    }
   }
-}
-
-export default {
-  state,
-  actions
-}
+})
