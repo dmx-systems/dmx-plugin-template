@@ -9,6 +9,7 @@
     "url": "https://github.com/jri/dm5-plugin-template.git"
   },
   "scripts": {
-    "build": "../../node_modules/.bin/webpack -p --hide-modules"
+    "build": "../../node_modules/.bin/webpack -p --hide-modules",
+    "stats": "../../node_modules/.bin/webpack -p --json > stats.json && ../../node_modules/.bin/webpack-bundle-analyzer stats.json dist"
   }
 }

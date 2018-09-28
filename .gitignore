@@ -2,6 +2,7 @@ target/
 dist/
 node_modules/
 npm-debug.log
+stats.json
 .DS_Store
 *~
 commit-message.txt
