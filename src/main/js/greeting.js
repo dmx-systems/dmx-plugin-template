@@ -1,4 +1,4 @@
-export default ({dm5}) => ({
+export default ({dm5, axios, Vue}) => ({
 
   state: {
     buttonLabel: "Greetings!"
@@ -6,7 +6,7 @@ export default ({dm5}) => ({
 
   actions: {
     greet () {
-      console.log('Greetings!')
+      console.log('Greetings!', dm5, axios, Vue)
       dm5.restClient.createTopic({
         typeUri: 'dmx.notes.note',
         childs: {
