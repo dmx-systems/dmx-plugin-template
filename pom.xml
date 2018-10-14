@@ -7,7 +7,7 @@
     <name>DeepaMehta 5 Plugin Template</name>
     <groupId>com.example</groupId>
     <artifactId>dm5-plugin-template</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3</version>
     <packaging>bundle</packaging>
 
     <parent>
