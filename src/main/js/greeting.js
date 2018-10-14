@@ -6,7 +6,7 @@ export default ({dm5, axios, Vue}) => ({
 
   actions: {
     greet () {
-      console.log('Greetings!', dm5, axios, Vue)
+      console.log('greet', dm5, axios, Vue)
       dm5.restClient.createTopic({
         typeUri: 'dmx.notes.note',
         childs: {
