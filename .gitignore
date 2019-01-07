@@ -1,5 +1,5 @@
 target/
-dist/
+src/main/resources/web/
 node_modules/
 npm-debug.log
 stats.json
