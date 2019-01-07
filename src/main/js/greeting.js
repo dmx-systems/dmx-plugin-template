@@ -1,3 +1,6 @@
+// This is the Vuex store module provided by your plugin.
+// This file exports a Vuex store module object or a function which returns such an object.
+// The function receives a "dependencies" object with 3 properties: 'dm5', 'axios', and 'Vue'.
 export default ({dm5, axios, Vue}) => ({
 
   state: {
@@ -6,7 +9,6 @@ export default ({dm5, axios, Vue}) => ({
 
   actions: {
     greet () {
-      console.log('greet', dm5, axios, Vue)
       dm5.restClient.createTopic({
         typeUri: 'dmx.notes.note',
         childs: {
