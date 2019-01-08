@@ -4,6 +4,7 @@
 // Artifact ID (see this plugin's pom.xml), and has basically the form "<groupId>.<artifactId>".
 const pluginUri = 'com.example.dm5-plugin-template'
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
@@ -31,11 +32,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader']
+        loader: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[contenthash].css'
+    }),
     new VueLoaderPlugin()
   ]
 }

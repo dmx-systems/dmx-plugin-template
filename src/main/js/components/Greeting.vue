@@ -1,9 +1,9 @@
 <!--
   The DMX webclient registers a bunch of Vue components globally, so you can just use them in your component's
   <template> without registering them yourself. These components comprise:
-  1) all Element UI components utilized by the webclient, e.g. <el-button>, <el-input>, <el-select>, ..., see
+  1. all Element UI components utilized by the webclient, e.g. <el-button>, <el-input>, <el-select>, ..., see
      https://github.com/jri/deepamehta/blob/master/modules/dmx-webclient/src/main/js/element-ui.js
-  2) all components provided by the `dm5-object-renderer` module, see
+  2. all components provided by the `dm5-object-renderer` module, see
      https://github.com/jri/dm5-object-renderer/tree/master/src/components
 -->
 <template>
