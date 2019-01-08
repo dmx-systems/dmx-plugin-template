@@ -12,7 +12,7 @@ module.exports = {
   entry: './src/main/js/plugin.js',
   output: {
     path: __dirname + '/src/main/resources/web',
-    filename: '[chunkhash].js',
+    filename: '[chunkhash].plugin.js',
     publicPath: '/' + pluginUri + '/',
     library: '_' + pluginUri.replace(/[.-]/g, '_'),
     libraryTarget: 'jsonp'
@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[contenthash].css'
+      filename: '[contenthash].style.css'
     }),
     new CleanWebpackPlugin([
       'src/main/resources/web'
