@@ -5,7 +5,8 @@
 const pluginUri = 'com.example.dm5-plugin-template'
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const CleanWebpackPlugin   = require('clean-webpack-plugin')
+const { VueLoaderPlugin }  = require('vue-loader')
 
 module.exports = {
   entry: './src/main/js/plugin.js',
@@ -40,6 +41,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[contenthash].css'
     }),
+    new CleanWebpackPlugin([
+      'src/main/resources/web'
+    ]),
     new VueLoaderPlugin()
   ]
 }
