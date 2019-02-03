@@ -48,6 +48,6 @@ export default {
 
 <style>
 .greeting {
-  align-self: flex-end;
+  margin-left: 2em;
 }
 </style>
