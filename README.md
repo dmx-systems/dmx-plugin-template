@@ -6,7 +6,7 @@ A plugin for the DeepaMehta platform can contain both, a server-side part, and/o
 
 This template project assumes you want develop a DeepaMehta 5 plugin that extends the standard DeepaMehta webclient. It is *not* suited for developing a proprietary DeepaMehta 5 web front-end. You can also use this template to add a server-side part to the plugin later on, however this is not yet demonstrated.
 
-## Build DeepaMehta 5 from source
+### Build DeepaMehta 5 from source
 
 The template project assumes you have build DeepaMehta 5 from source:
 
@@ -18,7 +18,7 @@ mvn clean install -P all -DskipTests
 
 Only when you build DeepaMehta 5 from source you will get Hot Module Replacement. Hot Module Replacement provides you a comfortable development experience.
 
-## Clone the template project
+### Clone the template project
 
 The template project assumes being cloned inside DeepaMehta's `modules-external` directory.
 
@@ -32,7 +32,7 @@ Cloning inside `modules-external` has 2 advantages:
 - For building the production version of the plugin the existing Webpack installation of the DeepaMehta installation will be reused (you don't need install Webpack for every plugin project again and again).
 - The production build of your plugin is automatically copied to DeepaMehta's `bundle-deploy` directory in order to get hot deployed.
 
-## Configure Hot Module Replacement
+### Configure Hot Module Replacement
 
 In `deepamehta/modules/dmx-webclient/src/main/js/plugin-manager.js` look for the comment `// while development add your plugins here` and add a `initPlugin()` call as follows:
 
@@ -43,7 +43,7 @@ initPlugin(require('modules-external/dm5-plugin-template/src/main/js/plugin.js')
 
 This gives you Hot Module Replacement. That is every time you modify any of your plugin's front-end files (e.g. `.js`, `.vue`) the browser provides you instant feedback. Hot Module Replacement is handled by Webpack Dev Server.
 
-## Start the server(s)
+### Start the server(s)
 
 1. Start the DeepaMehta back-end server:
 
@@ -63,7 +63,7 @@ This gives you Hot Module Replacement. That is every time you modify any of your
 
     The Webpack Dev Server (which listens on port `8082`) will build the DeepaMehta webclient along with your plugin (as you have added it to `plugin-manager.js`), and then launches the webclient along with your plugin in a browser window (`http://localhost:8082`).
 
-## What the example plugin does
+### What the example plugin does
 
 The example plugin mounts a "Greetings!" button into the webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
 
@@ -75,13 +75,13 @@ Although this is trivial functionality the plugin's source code demonstrates a c
 * Registering a Vuex store module for managing the plugin's state
 * Injecting DeepaMehta libraries (e.g. DM5 Core types, DM5 REST client) into components and store module
 
-## Start developing
+### Start developing
 
 Now adapt the example plugin to your own needs. Every DeepaMehta plugin which extends the standard webclient has a `src/main/js/plugin.js` file. The `plugin.js` file declares the various assets your plugin provides (e.g. Vue.js components, Vuex store module). Start your inspection there.
 
 While development the result of every modification you make is immediately visible in the browser due to Hot Module Replacement.
 
-## Build plugin for production
+### Build plugin for production
 
 ```sh
 cd dm5-plugin-template

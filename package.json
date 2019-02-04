@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "A starter project for DeepaMehta 5 plugin developers",
   "author": "Jörg Richter",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
     "url": "https://github.com/jri/dm5-plugin-template.git"
