@@ -96,6 +96,16 @@ Test the production build of your plugin by opening the webclient, but this time
 
 ## Version History
 
+**0.4** -- Feb 4, 2019
+
+* Plugin production build:
+    * CSS extraction
+    * Add hashes to js and css files to support longterm caching
+    * Remove old builds
+* More example code annotations
+* Simplified pom.xml
+* Change license to `GPL-3.0-or-later`
+
 **0.3** -- Oct 14, 2018
 
 * Illustrates dependency injection (`dm5`, `axios`, `Vue`)
@@ -112,4 +122,4 @@ Test the production build of your plugin by opening the webclient, but this time
 
 ------------
 Jörg Richter  
-Oct 14, 2018
+Feb 4, 2019
