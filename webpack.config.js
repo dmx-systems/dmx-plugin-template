@@ -41,9 +41,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[contenthash].style.css'
     }),
-    new CleanWebpackPlugin([
-      'src/main/resources/web'
-    ]),
+    new CleanWebpackPlugin(),
     new VueLoaderPlugin()
   ]
 }
