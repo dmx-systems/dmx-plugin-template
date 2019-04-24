@@ -1,8 +1,8 @@
 {
   "name": "dm5-plugin-template",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A starter project for DeepaMehta 5 plugin developers",
-  "author": "Jörg Richter",
+  "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
