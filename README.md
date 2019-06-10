@@ -8,7 +8,16 @@ This template project assumes you want develop a DeepaMehta 5 plugin that extend
 
 ### Build DeepaMehta 5 from source
 
-The template project assumes you have build DeepaMehta 5 from source:
+The template project assumes you have built DeepaMehta 5 from source.
+
+These tools are needed:
+
+- Java 8
+- Maven
+- Node.js
+- git
+
+Build from source:
 
 ```sh
 git clone https://github.com/jri/deepamehta.git
