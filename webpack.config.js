@@ -13,6 +13,7 @@ module.exports = {
   output: {
     path: __dirname + '/src/main/resources/web',
     filename: '[chunkhash].plugin.js',
+    chunkFilename: '[chunkhash].[name].js',
     publicPath: '/' + pluginUri + '/',
     library: '_' + pluginUri.replace(/[.-]/g, '_'),
     libraryTarget: 'jsonp'
