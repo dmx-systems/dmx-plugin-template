@@ -33,7 +33,7 @@ The template project assumes being cloned inside DeepaMehta's `modules-external`
 
 ```sh
 cd modules-external
-clone https://github.com/jri/dm5-plugin-template.git
+git clone https://github.com/jri/dm5-plugin-template.git
 ```
 
 Cloning inside `modules-external` has 2 advantages:
