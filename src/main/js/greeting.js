@@ -11,7 +11,7 @@ export default ({dm5, axios, Vue}) => ({
     greet () {
       dm5.restClient.createTopic({
         typeUri: 'dmx.notes.note',
-        childs: {
+        children: {
           'dmx.notes.title': {value: 'Greetings'},
           'dmx.notes.text':  {value: '<p>from <b>DMX</b>!<p>'}
         }
