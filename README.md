@@ -105,6 +105,14 @@ Test the production build of your plugin by opening the webclient, but this time
 
 ## Version History
 
+**0.5** -- Nov 25, 2019
+
+* Improvement:
+    * Default config supports code splitting
+* Chore:
+    * Adapted to DMX 5.0-beta-6
+    * Revised README
+
 **0.4.1** -- Apr 24, 2019
 
 * Chore:
@@ -137,4 +145,4 @@ Test the production build of your plugin by opening the webclient, but this time
 
 ------------
 Jörg Richter  
-Apr 24, 2019
+Nov 25, 2019
