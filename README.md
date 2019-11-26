@@ -110,7 +110,7 @@ Test the production build of your plugin by opening the webclient, but this time
 * Improvement:
     * Default config supports code splitting
 * Chore:
-    * Adapted to DMX 5.0-beta-6
+    * Adapt to DMX 5.0-beta-6
     * Revised README
 
 **0.4.1** -- Apr 24, 2019

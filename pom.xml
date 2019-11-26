@@ -7,13 +7,13 @@
     <name>DeepaMehta 5 Plugin Template</name>
     <groupId>com.example</groupId>
     <artifactId>dm5-plugin-template</artifactId>
-    <version>0.5</version>
+    <version>0.6-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
     <parent>
         <groupId>systems.dmx</groupId>
         <artifactId>dmx-plugin</artifactId>
-        <version>5.0-beta-6</version>
+        <version>5.0-beta-7-SNAPSHOT</version>
     </parent>
 
     <build>
