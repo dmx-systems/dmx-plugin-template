@@ -4,9 +4,9 @@
 // Artifact ID (see this plugin's pom.xml), and has basically the form "<groupId>.<artifactId>".
 const pluginUri = 'com.example.dm5-plugin-template'
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CleanWebpackPlugin   = require('clean-webpack-plugin')
-const { VueLoaderPlugin }  = require('vue-loader')
+const MiniCssExtractPlugin   = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { VueLoaderPlugin }    = require('vue-loader')
 
 module.exports = {
   entry: './src/main/js/plugin.js',
