@@ -29,14 +29,14 @@ Only when you build DeepaMehta 5 from source you will get Hot Module Replacement
 
 ### Clone the template project
 
-The template project assumes being cloned inside DeepaMehta's `modules-external` directory.
+Clone the template project inside DeepaMehta's `modules-external` directory:
 
 ```sh
 cd modules-external
 git clone https://github.com/jri/dm5-plugin-template.git
 ```
 
-Cloning inside `modules-external` has 2 advantages:
+Cloning inside `modules-external` gives you 2 features without requiring manual configuration:
 
 - For building the production version of the plugin the existing Webpack installation of the DeepaMehta installation will be reused (you don't need install Webpack for every plugin project again and again).
 - The production build of your plugin is automatically copied to DeepaMehta's `bundle-deploy` directory in order to get hot deployed.
