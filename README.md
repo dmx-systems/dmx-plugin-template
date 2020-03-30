@@ -105,6 +105,14 @@ Test the production build of your plugin by opening the webclient, but this time
 
 ## Version History
 
+**0.6** -- Mar 30, 2020
+
+* Improvement:
+    * Support code splitting also for CSS
+* Chore:
+    * Adapt to `clean-webpack-plugin` 3.0
+* Requires DMX 5.0-beta-7
+
 **0.5** -- Nov 25, 2019
 
 * Improvement:
@@ -142,7 +150,3 @@ Test the production build of your plugin by opening the webclient, but this time
 **0.2** -- Mar 26, 2018
 
 **0.1** -- May 1, 2017
-
-------------
-Jörg Richter  
-Nov 25, 2019
