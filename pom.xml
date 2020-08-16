@@ -4,9 +4,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>DeepaMehta 5 Plugin Template</name>
+    <name>DMX 5 Plugin Template</name>
     <groupId>com.example</groupId>
-    <artifactId>dm5-plugin-template</artifactId>
+    <artifactId>dmx-plugin-template</artifactId>
     <version>0.6</version>
     <packaging>bundle</packaging>
 

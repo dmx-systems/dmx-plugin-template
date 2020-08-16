@@ -1,12 +1,12 @@
 {
-  "name": "dm5-plugin-template",
+  "name": "dmx-plugin-template",
   "version": "0.6.0",
-  "description": "A starter project for DeepaMehta 5 plugin developers",
+  "description": "A starter project for developing a DMX 5 plugin",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jri/dm5-plugin-template.git"
+    "url": "https://git.dmx.systems/dmx-plugins/dmx-plugin-template.git"
   },
   "scripts": {
     "build": "../../node_modules/.bin/webpack -p --hide-modules",

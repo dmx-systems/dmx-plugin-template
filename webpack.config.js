@@ -2,7 +2,7 @@
 // Being an OSGi bundle every DMX plugin has a globally unique "Bundle Symbolic Name" (see OSGi specification).
 // The Bundle Symbolic Name is calculated by the Maven Bundle Plugin based on the plugin's Maven Group ID and
 // Artifact ID (see this plugin's pom.xml), and has basically the form "<groupId>.<artifactId>".
-const pluginUri = 'com.example.dm5-plugin-template'
+const pluginUri = 'com.example.dmx-plugin-template'
 
 const MiniCssExtractPlugin   = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')

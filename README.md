@@ -1,14 +1,14 @@
-# DeepaMehta 5 Plugin Template
+# DMX 5 Plugin Template
 
-This project is aimed at [DeepaMehta 5](https://github.com/jri/deepamehta) plugin developers.
+This project is aimed at [DMX 5](https://git.dmx.systems/dmx-platform/dmx-platform) plugin developers.
 
-A plugin for the DeepaMehta platform can contain both, a server-side part, and/or a client-side part. The client-side part can either extend the standard DeepaMehta webclient, or can be a proprietary web front-end (possibly exposing its own extension mechanism).
+A plugin for the DMX platform can contain both, a server-side part, and/or a client-side part. The client-side part can either extend the standard DMX Webclient, or can be a proprietary web front-end (possibly exposing its own extension mechanism).
 
-This template project assumes you want develop a DeepaMehta 5 plugin that extends the standard DeepaMehta webclient. It is *not* suited for developing a proprietary DeepaMehta 5 web front-end. You can also use this template to add a server-side part to the plugin later on, however this is not yet demonstrated.
+This template project assumes you want develop a DMX 5 plugin that extends the standard DMX Webclient. It is *not* suited for developing a proprietary DMX 5 web front-end. You can also use this template to add a server-side part to the plugin later on, however this is not yet demonstrated.
 
-### Build DeepaMehta 5 from source
+### Build DMX 5 from source
 
-The template project assumes you have built DeepaMehta 5 from source.
+The template project assumes you have built DMX 5 from source.
 
 These tools are needed:
 
@@ -20,86 +20,86 @@ These tools are needed:
 Build from source:
 
 ```sh
-git clone https://github.com/jri/deepamehta.git
-cd deepamehta
-mvn clean install -P all -DskipTests
+git clone https://git.dmx.systems/dmx-platform/dmx-platform.git
+cd dmx-platform
+mvn clean install -P all
 ```
 
-Only when you build DeepaMehta 5 from source you will get Hot Module Replacement. Hot Module Replacement provides you a comfortable development experience.
+Only when you build DMX 5 from source you will get Hot Module Replacement. Hot Module Replacement provides you a comfortable development experience.
 
 ### Clone the template project
 
-Clone the template project inside DeepaMehta's `modules-external` directory:
+Clone the template project inside DMX's `modules-external` directory:
 
 ```sh
 cd modules-external
-git clone https://github.com/jri/dm5-plugin-template.git
+git clone https://git.dmx.systems/dmx-plugins/dmx-plugin-template.git
 ```
 
 Cloning inside `modules-external` gives you 2 features without requiring manual configuration:
 
-- For building the production version of the plugin the existing Webpack installation of the DeepaMehta installation will be reused (you don't need install Webpack for every plugin project again and again).
-- The production build of your plugin is automatically copied to DeepaMehta's `bundle-deploy` directory in order to get hot deployed.
+- For building the production version of the plugin the existing Webpack installation of the DMX installation will be reused (you don't need install Webpack for every plugin project again and again).
+- The production build of your plugin is automatically copied to DMX's `bundle-deploy` directory in order to get hot deployed.
 
 ### Configure Hot Module Replacement
 
-In `deepamehta/modules/dmx-webclient/src/main/js/plugin-manager.js` look for the comment `// while development add your plugins here` and add a `initPlugin()` call as follows:
+In `dmx-platform/modules/dmx-webclient/src/main/js/plugin-manager.js` look for the comment `// while development add your plugins here` and add a `initPlugin()` call as follows:
 
 ```js
 // while development add your plugins here
-initPlugin(require('modules-external/dm5-plugin-template/src/main/js/plugin.js').default)
+initPlugin(require('modules-external/dmx-plugin-template/src/main/js/plugin.js').default)
 ```
 
 This gives you Hot Module Replacement. That is every time you modify any of your plugin's front-end files (e.g. `.js`, `.vue`) the browser provides you instant feedback. Hot Module Replacement is handled by Webpack Dev Server.
 
 ### Start the server(s)
 
-1. Start the DeepaMehta back-end server:
+1. Start the DMX back-end server:
 
     ```
-    cd deepamehta
+    cd dmx-platform
     mvn pax:run
     ```
 
-    By default the DeepaMehta back-end server listens on port `8080`.
+    By default the DMX back-end server listens on port `8080`.
 
 2. In another terminal: start the Webpack Dev Server:
 
     ```
-    cd deepamehta
+    cd dmx-platform
     npm run dev
     ```
 
-    The Webpack Dev Server (which listens on port `8082`) will build the DeepaMehta webclient along with your plugin (as you have added it to `plugin-manager.js`), and then launches the webclient along with your plugin in a browser window (`http://localhost:8082`).
+    The Webpack Dev Server (which listens on port `8082`) will build the DMX Webclient along with your plugin (as you have added it to `plugin-manager.js`), and then launches the Webclient along with your plugin in a browser window (`http://localhost:8082`).
 
 ### What the example plugin does
 
-The example plugin mounts a "Greetings!" button into the webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
+The example plugin mounts a "Greetings!" button into the Webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
 
 ![greetings-button](img/greetings-button.png)
 
 Although this is trivial functionality the plugin's source code demonstrates a couple of crucial plugin concepts:
 
-* Mounting Vue.js components into the DeepaMehta webclient
+* Mounting Vue.js components into the DMX Webclient
 * Registering a Vuex store module for managing the plugin's state
-* Injecting DeepaMehta libraries (e.g. DM5 Core types, DM5 REST client) into components and store module
+* Injecting DMX libraries (e.g. DMX Core types, DMX REST client) into components and store module
 
 ### Start developing
 
-Now adapt the example plugin to your own needs. Every DeepaMehta plugin which extends the standard webclient has a `src/main/js/plugin.js` file. The `plugin.js` file declares the various assets your plugin provides (e.g. Vue.js components, Vuex store module). Start your inspection there.
+Now adapt the example plugin to your own needs. Every DMX plugin which extends the standard Webclient has a `src/main/js/plugin.js` file. The `plugin.js` file declares the various assets your plugin provides (e.g. Vue.js components, Vuex store module). Start your inspection there.
 
 While development the result of every modification you make is immediately visible in the browser due to Hot Module Replacement.
 
 ### Build plugin for production
 
 ```sh
-cd dm5-plugin-template
+cd dmx-plugin-template
 mvn clean package
 ```
 
-This will build a `.jar` file for production and copy it to DeepaMehta's `bundle-deploy` directory. The `.jar` file contains your plugin (minified Javascript, extracted CSS, both hashed for longterm caching) and is deployable in every DeepaMehta 5 installation. The production build is handled by Webpack. The DeepaMehta backend server serves the plugin front-end assets via http(s).
+This will build a `.jar` file for production and copy it to DMX's `bundle-deploy` directory. The `.jar` file contains your plugin (minified Javascript, extracted CSS, both hashed for longterm caching) and is deployable in every DMX 5 installation. The production build is handled by Webpack. The DMX backend server serves the plugin front-end assets via http(s).
 
-Test the production build of your plugin by opening the webclient, but this time as served from the DeepaMehta back-end server `http://localhost:8080/systems.dmx.webclient/` (note that the trailing slash is needed). The "Greetings!" button is supposed to appear and function like before. But note that this time the DeepaMehta webclient fetches the plugin's front-end assets (Javascript, CSS) from the DeepaMehta back-end server (no dev server involved). You can see this in the browser console:
+Test the production build of your plugin by opening the Webclient, but this time as served from the DMX back-end server `http://localhost:8080/systems.dmx.webclient/` (note that the trailing slash is needed). The "Greetings!" button is supposed to appear and function like before. But note that this time the DMX Webclient fetches the plugin's front-end assets (Javascript, CSS) from the DMX back-end server (no dev server involved). You can see this in the browser console:
 
 ![fetch-plugin](img/fetch-plugin.png)
 
