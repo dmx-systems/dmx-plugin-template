@@ -2,9 +2,9 @@
 
 This project is aimed at [DMX 5](https://git.dmx.systems/dmx-platform/dmx-platform) plugin developers.
 
-A plugin for the DMX platform can contain both, a server-side part, and/or a client-side part. The client-side part can either extend the standard DMX Webclient, or can be a proprietary web front-end (possibly exposing its own extension mechanism).
+A plugin for the DMX platform can contain both, a server-side part, and/or a client-side part. At client-side a plugin either *extends* the DMX Webclient, or *creates* a complete custom web front-end (which possibly provides its own extension mechanism).
 
-This template project assumes you want develop a DMX 5 plugin that extends the standard DMX Webclient. It is *not* suited for developing a proprietary DMX 5 web front-end. You can also use this template to add a server-side part to the plugin later on, however this is not yet demonstrated.
+This template project assumes you want develop a DMX plugin that extends the DMX Webclient. It is *not* suited for developing a custom web front-end. You can also use this template to add a server-side part to the plugin later on, however this is not demonstrated here.
 
 ### Build DMX 5 from source
 
@@ -72,9 +72,9 @@ This gives you Hot Module Replacement. That is every time you modify any of your
 
     The Webpack Dev Server (which listens on port `8082`) will build the DMX Webclient along with your plugin (as you have added it to `plugin-manager.js`), and then launches the Webclient along with your plugin in a browser window (`http://localhost:8082`).
 
-### What the example plugin does
+### What the plugin does
 
-The example plugin mounts a "Greetings!" button into the Webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
+The plugin mounts a "Greetings!" button into the Webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
 
 ![greetings-button](img/greetings-button.png)
 
@@ -86,7 +86,7 @@ Although this is trivial functionality the plugin's source code demonstrates a c
 
 ### Start developing
 
-Now adapt the example plugin to your own needs. Every DMX plugin which extends the standard Webclient has a `src/main/js/plugin.js` file. The `plugin.js` file declares the various assets your plugin provides (e.g. Vue.js components, Vuex store module). Start your inspection there.
+Now adapt the plugin to your own needs. Every DMX plugin which extends the standard Webclient has a `src/main/js/plugin.js` file. The `plugin.js` file declares the various assets your plugin provides (e.g. Vue.js components, Vuex store module). Start your inspection there.
 
 While development the result of every modification you make is immediately visible in the browser due to Hot Module Replacement.
 
@@ -102,6 +102,11 @@ This will build a `.jar` file for production and copy it to DMX's `bundle-deploy
 Test the production build of your plugin by opening the Webclient, but this time as served from the DMX back-end server `http://localhost:8080/systems.dmx.webclient/` (note that the trailing slash is needed). The "Greetings!" button is supposed to appear and function like before. But note that this time the DMX Webclient fetches the plugin's front-end assets (Javascript, CSS) from the DMX back-end server (no dev server involved). You can see this in the browser console:
 
 ![fetch-plugin](img/fetch-plugin.png)
+
+### Learn more
+
+To learn more about DMX plugin development have a look at the DMX Developer Guide:  
+https://dmx.readthedocs.io/en/latest/devel.html
 
 ## Version History
 

@@ -23,4 +23,7 @@ export default ({store, dm5, axios, Vue}) => ({
   // - provide type-specific detail renderers
   // - provide additional topicmap types and renderers
   // - add special items to the Webclient's Create menu
+
+  // Learn more about DMX plugin development with the DMX Developer Guide:
+  // https://dmx.readthedocs.io/en/latest/devel.html
 })
