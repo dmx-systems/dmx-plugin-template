@@ -110,6 +110,12 @@ https://dmx.readthedocs.io/en/latest/devel.html
 
 ## Version History
 
+**0.6.1** -- Aug 17, 2020
+
+* Chore:
+    * Compatible with DMX 5.0
+    * Revised README
+
 **0.6** -- Mar 30, 2020
 
 * Improvement:
