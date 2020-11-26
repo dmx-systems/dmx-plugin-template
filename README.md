@@ -54,14 +54,14 @@ This gives you Hot Module Replacement. That is every time you modify any of your
 
 ### Start the server(s)
 
-1. Start the DMX back-end server:
+1. Start the DMX server:
 
     ```
     cd dmx-platform
     mvn pax:run
     ```
 
-    By default the DMX back-end server listens on port `8080`.
+    By default the DMX server listens on port `8080`.
 
 2. In another terminal: start the Webpack Dev Server:
 
@@ -97,9 +97,9 @@ cd dmx-plugin-template
 mvn clean package
 ```
 
-This will build a `.jar` file for production and copy it to DMX's `bundle-deploy` directory. The `.jar` file contains your plugin (minified Javascript, extracted CSS, both hashed for longterm caching) and is deployable in every DMX 5 installation. The production build is handled by Webpack. The DMX backend server serves the plugin front-end assets via http(s).
+This will build a `.jar` file for production and copy it to DMX's `bundle-deploy` directory. The `.jar` file contains your plugin (minified Javascript, extracted CSS, both hashed for longterm caching) and is deployable in every DMX 5 installation. The production build is handled by Webpack. The DMX server serves the plugin front-end assets via http(s).
 
-Test the production build of your plugin by opening the Webclient, but this time as served from the DMX back-end server `http://localhost:8080/systems.dmx.webclient/` (note that the trailing slash is needed). The "Greetings!" button is supposed to appear and function like before. But note that this time the DMX Webclient fetches the plugin's front-end assets (Javascript, CSS) from the DMX back-end server (no dev server involved). You can see this in the browser console:
+Test the production build of your plugin by opening the Webclient, but this time as served from the DMX server `http://localhost:8080/systems.dmx.webclient/` (note that the trailing slash is needed). The "Greetings!" button is supposed to appear and function like before. But note that this time the DMX Webclient fetches the plugin's front-end assets (Javascript, CSS) from the DMX server (no Webpack Dev Server involved). You can see this in the browser console:
 
 ![fetch-plugin](img/fetch-plugin.png)
 
