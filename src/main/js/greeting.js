@@ -9,7 +9,7 @@ export default ({dm5, axios, Vue}) => ({
 
   actions: {
     greet () {
-      dm5.restClient.createTopic({
+      dm5.rpc.createTopic({
         typeUri: 'dmx.notes.note',
         children: {
           'dmx.notes.title': {value: 'Greetings'},
