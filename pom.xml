@@ -13,7 +13,7 @@
     <parent>
         <groupId>systems.dmx</groupId>
         <artifactId>dmx-plugin</artifactId>
-        <version>5.0</version>
+        <version>5.1-SNAPSHOT</version>
     </parent>
 
     <build>
