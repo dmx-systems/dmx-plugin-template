@@ -13,19 +13,19 @@
 <script>
 export default {
 
-  // In a DMX Webclient component you can inject 3 dependencies: 'dm5', 'axios', 'Vue'.
+  // In a DMX Webclient component you can inject 3 dependencies: 'dmx', 'axios', 'Vue'.
   // Important: do *not* import/require these libraries yourself. They would be statically bundled with your plugin then
   // (instead of being injected at runtime). Disadvantages: 1) The plugin build size would increase, and 2) at runtime
   // the libraries would be instantiated more than once, possibly causing problems.
   inject: {
-    dm5:  'dm5',
+    dmx:  'dmx',
     http: 'axios',
     Vue:  'Vue'
   },
 
   created () {
     this.http.get('/core/topic/0').then(response => {
-      console.log(new this.dm5.Topic(response.data))
+      console.log(new this.dmx.Topic(response.data))
     })
     this.Vue.nextTick(() => {
       console.log('Hello Vue!')
