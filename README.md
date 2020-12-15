@@ -1,6 +1,6 @@
 # DMX 5 Plugin Template
 
-This project is aimed at [DMX 5](https://git.dmx.systems/dmx-platform/dmx-platform) plugin developers.
+This project is aimed at [DMX 5](https://github.com/dmx-systems/dmx-platform) plugin developers.
 
 A plugin for the DMX platform can contain both, a server-side part, and/or a client-side part. At client-side a plugin either *extends* the DMX Webclient, or *creates* a complete custom web front-end (which possibly provides its own extension mechanism).
 
@@ -20,7 +20,7 @@ These tools are needed:
 Build from source:
 
 ```sh
-git clone https://git.dmx.systems/dmx-platform/dmx-platform.git
+git clone https://github.com/dmx-systems/dmx-platform.git
 cd dmx-platform
 mvn clean install -P all
 ```
@@ -33,7 +33,7 @@ Clone the template project inside DMX's `modules-external` directory:
 
 ```sh
 cd modules-external
-git clone https://git.dmx.systems/dmx-plugins/dmx-plugin-template.git
+git clone https://github.com/dmx-systems/dmx-plugin-template.git
 ```
 
 Cloning inside `modules-external` gives you 2 features without requiring manual configuration:
