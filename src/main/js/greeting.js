@@ -8,13 +8,15 @@ export default ({dmx, axios, Vue}) => ({
   },
 
   actions: {
-    greet () {
+    greet ({dispatch}) {
       dmx.rpc.createTopic({
         typeUri: 'dmx.notes.note',
         children: {
-          'dmx.notes.title': {value: 'Greetings'},
-          'dmx.notes.text':  {value: '<p>from <b>DMX</b>!<p>'}
+          'dmx.notes.title': 'Greetings',
+          'dmx.notes.text':  '<p>from <b>DMX</b>!<p>'
         }
+      }).then(topic => {
+        dispatch('revealTopic', {topic})
       })
     }
   }
