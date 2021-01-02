@@ -1,6 +1,6 @@
 {
   "name": "dmx-plugin-template",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A starter project for developing a DMX 5 plugin",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "GPL-3.0-or-later",

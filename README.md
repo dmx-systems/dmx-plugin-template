@@ -110,6 +110,16 @@ https://dmx.readthedocs.io/en/latest/devel.html
 
 ## Version History
 
+**0.7** -- Jan 2, 2021
+
+* Code Examples:
+    * Dispatching Webclient actions (`revealTopic`)
+    * Adding Vuex state (`greetingCount`)
+* Chore:
+    * Adapt URLs to `github.com/dmx-systems`
+    * Code run through `eslint`
+* Compatible with DMX 5.1
+
 **0.6.1** -- Aug 17, 2020
 
 * Chore:
