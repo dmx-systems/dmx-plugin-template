@@ -4,15 +4,17 @@
 export default ({dmx, axios, Vue}) => ({
 
   state: {
-    buttonLabel: "Greetings!"
+    buttonLabel: "Greetings!",
+    greetingCount: 0
   },
 
   actions: {
-    greet ({dispatch}) {
+    greet ({state, dispatch}) {
+      state.greetingCount++
       dmx.rpc.createTopic({
         typeUri: 'dmx.notes.note',
         children: {
-          'dmx.notes.title': 'Greetings',
+          'dmx.notes.title': `Greeting ${state.greetingCount}`,
           'dmx.notes.text':  '<p>from <b>DMX</b>!<p>'
         }
       }).then(topic => {
