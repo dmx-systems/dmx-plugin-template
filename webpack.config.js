@@ -4,14 +4,15 @@
 // Artifact ID (see this plugin's pom.xml), and has basically the form "<groupId>.<artifactId>".
 const pluginUri = 'com.example.dmx-plugin-template'
 
-const MiniCssExtractPlugin   = require('mini-css-extract-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { VueLoaderPlugin }    = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const {VueLoaderPlugin}    = require('vue-loader')
+const path = require('path')
 
 module.exports = {
   entry: './src/main/js/plugin.js',
   output: {
-    path: __dirname + '/src/main/resources/web',
+    path: path.join(__dirname, '/src/main/resources/web'),
     filename: '[chunkhash].plugin.js',
     chunkFilename: '[chunkhash].[name].js',
     publicPath: '/' + pluginUri + '/',
@@ -19,7 +20,7 @@ module.exports = {
     libraryTarget: 'jsonp'
   },
   resolve: {
-    extensions: [".js", ".vue"]
+    extensions: ['.js', '.vue']
   },
   module: {
     rules: [

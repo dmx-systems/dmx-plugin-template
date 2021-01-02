@@ -4,7 +4,7 @@
 export default ({dmx, axios, Vue}) => ({
 
   state: {
-    buttonLabel: "Greetings!",
+    buttonLabel: 'Greetings!',
     greetingCount: 0
   },
 
