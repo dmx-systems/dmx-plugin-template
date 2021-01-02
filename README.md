@@ -74,7 +74,7 @@ This gives you Hot Module Replacement. That is every time you modify any of your
 
 ### What the plugin does
 
-The plugin mounts a "Greetings!" button into the Webclient's toolbar. Every time you click it another "Greetings" Note topic is created (but not revealed).
+The plugin mounts a "Greetings!" button into the Webclient's toolbar. When you click it, another "Greetings" Note topic is created in the database and revealed on the topicmap.
 
 ![greetings-button](img/greetings-button.png)
 
