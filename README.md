@@ -82,7 +82,8 @@ Although this is trivial functionality the plugin's source code demonstrates a c
 
 * Mounting Vue.js components into the DMX Webclient
 * Registering a Vuex store module for managing the plugin's state
-* Injecting DMX libraries (e.g. DMX Core types, DMX REST client) into components and store module
+* Injecting Webclient dependencies (e.g. `dmx-api`) into components and store module
+* Dispatching Webclient actions (e.g. `revealTopic`)
 
 ### Start developing
 
