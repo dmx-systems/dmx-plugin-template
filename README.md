@@ -107,7 +107,7 @@ Test the production build of your plugin by opening the Webclient, but this time
 ### Learn more
 
 To learn more about DMX plugin development have a look at the DMX Developer Guide:  
-https://dmx.readthedocs.io/en/latest/devel.html
+https://docs.dmx.systems/en/latest/devel.html
 
 ## Version History
 

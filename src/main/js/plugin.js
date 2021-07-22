@@ -25,5 +25,5 @@ export default ({store, dmx, axios, Vue}) => ({
   // - add special items to the Webclient's Create menu
 
   // Learn more about DMX plugin development with the DMX Developer Guide:
-  // https://dmx.readthedocs.io/en/latest/devel.html
+  // https://docs.dmx.systems/en/latest/devel.html
 })
