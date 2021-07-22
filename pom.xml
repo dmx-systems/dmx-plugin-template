@@ -7,13 +7,13 @@
     <name>DMX 5 Plugin Template</name>
     <groupId>com.example</groupId>
     <artifactId>dmx-plugin-template</artifactId>
-    <version>0.7</version>
+    <version>0.7.1</version>
     <packaging>bundle</packaging>
 
     <parent>
         <groupId>systems.dmx</groupId>
         <artifactId>dmx-plugin</artifactId>
-        <version>5.1</version>
+        <version>5.2</version>
     </parent>
 
     <build>
