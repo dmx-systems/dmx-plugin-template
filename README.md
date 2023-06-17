@@ -111,6 +111,10 @@ https://docs.dmx.systems/en/latest/devel.html
 
 ## Version History
 
+**0.7.2** -- Jun 17, 2023
+
+* Compatible with DMX 5.3
+
 **0.7.1** -- Jul 23, 2021
 
 * Compatible with DMX 5.2
